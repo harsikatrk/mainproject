@@ -92,7 +92,7 @@ print("Balance amount to be paid is                  : ",balance)     #balance a
 #payment type
 payment_type = input("Payment type (Cash/UPI/Card)?                 : ")    #payment type
 #Door Delivery
-ch = "yes"
+ch = 'yes'
 while ch.lower() == "yes":
    print("Door Delivery \n1.Yes\n2.No") #to display the options
    choice = input("Enter choice(1/2):") #to enter the choice
@@ -107,6 +107,7 @@ while ch.lower() == "yes":
       break
 print("\n")
 # below lines are for reading purpose
+print("ORDER SUCCESSFUL !!!!. ORDER DETAILS !!!")
 print("Customer Name           : ", name)
 print("Phone Number - 1        : ", phn_no_1)
 print("Phone Number - 2        : ", phn_no_2)
@@ -121,5 +122,5 @@ print("Balance                 : ", balance)
 print("Amount paid in Advance  : ",paid)
 print("Payment Type            : ", payment_type)
 print("Door Delivery           : ", ch)
-print("Door Delivery           : ", dd_address)
+print("Door Delivery Address   : ", dd_address)
 
