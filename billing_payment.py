@@ -1,3 +1,5 @@
+print("WELCOME TO BILLING AND PAYAMENT") 
+print("\n")
 name          =      input("Enter the Name of the Customer          : ")  # getting name
 phn_no_1      = int (input("Enter the Phone Number - 1              : ")) # getting customer phone number - 1
 phn_no_2      = int (input("Enter the Phone Number - 2              : ")) # getting customer phone number -2
