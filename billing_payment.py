@@ -89,12 +89,10 @@ whole_amount=total_cost_Sweet+total_cost   #calculation of whole amount(sweet an
 print("Total Amount for both Sweets and Savouries is :",whole_amount)   #to print whole amount
 paid=int(input("Enter the Amount to pay in advance            : "))     #amount to pay in advance
 balance=whole_amount-paid     #calculation for balance amount to be paid
-print("Paid Amount is                                : ",paid)       #paid amount
-print("Balance amount to be paid is                  : ",balance)     #balance amount to be paid
-#payment type
-payment_type = input("Payment type (Cash/UPI/Card)?                 : ")    #payment type
+print("Paid Amount is                                :",paid)       #paid amount
 #Door Delivery
 ch = 'yes'
+
 while ch.lower() == "yes":
    print("Door Delivery \n1.Yes\n2.No") #to display the options
    choice = input("Enter choice(1/2):") #to enter the choice
@@ -102,27 +100,39 @@ while ch.lower() == "yes":
       dd_address=input("Enter the Address of Delivery :")  #to enter the address of the delivery
       break 
    elif choice == '2':   #if choice is 2 then the statement is break
+      ch='no'
       break
    else:
       print("Invalid input")  #if any invalid option entered
-   if ch== "no":
-      break
+  
+packaging_details = input("Note the packaging details : ")
+print("Balance amount to be paid is                  :",balance)     #balance amount to be paid
+#payment type
+payment_type = input("Payment type (Cash/UPI/Card)?                 : ")    #payment type
+if payment_type=='upi':
+    transaction_id=input("Enter the Transaction Id                      : ")
 print("\n")
 # below lines are for reading purpose
-print("ORDER SUCCESSFUL !!!!. ORDER DETAILS !!!")
-print("Customer Name           : ", name)
-print("Phone Number - 1        : ", phn_no_1)
-print("Phone Number - 2        : ", phn_no_2)
-print("Customer Address        : ", address)
-print("Date of Order           : ", date_of_order)
-print("Date of Delivery        : ", delivery_date)
-print("Delivery Time           : ", delivery_time)
-print("Total cost of Sweet     : ", total_cost_Sweet)
-print("Total cost of Savouries : ", total_cost)
-print("Total Amount            : ", whole_amount)
-print("Balance                 : ", balance)
-print("Amount paid in Advance  : ",paid)
-print("Payment Type            : ", payment_type)
-print("Door Delivery           : ", ch)
-print("Door Delivery Address   : ", dd_address)
+def bill():
+    print("ORDER SUCCESSFUL !!!!. ORDER DETAILS !!!")
+    print("Customer Name           : ", name)
+    print("Phone Number - 1        : ", phn_no_1)
+    print("Phone Number - 2        : ", phn_no_2)
+    print("Customer Address        : ", address)
+    print("Date of Order           : ", date_of_order)
+    print("Date of Delivery        : ", delivery_date)
+    print("Delivery Time           : ", delivery_time)
+    print("Total cost of Sweet     : ", total_cost_Sweet)
+    print("Total cost of Savouries : ", total_cost)
+    print("Total Amount            : ", whole_amount)
+    print("Amount paid in Advance  : ",paid)
+    print("Door Delivery           : ", ch)
+    if ch=='yes':
+        print("Door Delivery Address   : ", dd_address)
+    print("Packaging Details       : ", packaging_details)
+    print("Balance                 : ", balance)
+    print("Payment Type            : ", payment_type)
+    if payment_type=='upi':
+        print("Transaction Id          : ",transaction_id)
+bill()
 
