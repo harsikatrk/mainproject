@@ -1,5 +1,9 @@
+from database import insert_sql
+
+
 print("WELCOME TO BILLING AND PAYAMENT") 
 print("\n")
+
 name          =      input("Enter the Name of the Customer          : ")  # getting name
 phn_no_1      = int (input("Enter the Phone Number - 1              : ")) # getting customer phone number - 1
 phn_no_2      = int (input("Enter the Phone Number - 2              : ")) # getting customer phone number -2
@@ -7,6 +11,8 @@ address       =      input("Enter the Address of the Customer       : ")  # gett
 date_of_order =      input("Enter the Date of order                 : ")  # getting the date of order
 delivery_date =      input("Enter the Date of goods to be delivered : ")  # getting the date of delivery
 delivery_time =      input("Enter the Delivery Time                 : ")  #getting the time of delivery
+
+
 print("\n")
 #order for sweet
 total_cost_Sweet=''   #dummy variable outside the function
@@ -80,6 +86,7 @@ def takeorder_Savouries():
             total_cost += 9 * quantity
         else:
             print("Invalid Choice !!!")
+        savoury_weight = quantity
     print("Your total  Amount for Savouries alone:", total_cost)       #returns the total amount of savouries
 takeorder_Savouries()     #calling the function
         
@@ -115,6 +122,7 @@ print("\n")
 # below lines are for reading purpose
 def bill():
     print("ORDER SUCCESSFUL !!!!. ORDER DETAILS !!!")
+    #print("Bill Number             : ", test.randomNum )
     print("Customer Name           : ", name)
     print("Phone Number - 1        : ", phn_no_1)
     print("Phone Number - 2        : ", phn_no_2)
@@ -134,5 +142,8 @@ def bill():
     print("Payment Type            : ", payment_type)
     if payment_type=='upi':
         print("Transaction Id          : ",transaction_id)
+    
+    insert_sql(name, phn_no_1, phn_no_2, address, date_of_order, delivery_date, delivery_time, total_cost_Sweet, total_cost, whole_amount, paid, ch, dd_address, packaging_details, balance,payment_type, transaction_id)
+    
 bill()
 
