@@ -1,0 +1,18 @@
+Bill Number                             : 36
+Enter the Customer Name                 : h
+Enter the Phone Number-1                : 1
+Enter the Phone Number-2                : 2
+Enter the Address of the Customer       : 3
+Enter the Date of Order                 : 
+Enter the Date of Goods to be Delivered : 45
+Enter the Delivery Time                 : 6
+Total Cost of Sweet                     : 3800
+Total Cost of Savouries                 : 680.0
+Total Amount                            : 4480.0
+Amount paid in Advance                  : 122
+Door Delivery                           : yes
+Door Delivery Address                   : xfefd
+Packaging Details                       : dgved
+Balance                                 : 4358.0
+Payment Type                            : upi
+Transaction Id                          : sfcdwgvdv

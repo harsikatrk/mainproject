@@ -1,0 +1,18 @@
+Bill Number                             : 6
+Enter the Customer Name                 : h
+Enter the Phone Number-1                : 2
+Enter the Phone Number-2                : 3
+Enter the Address of the Customer       : 4
+Enter the Date of Order                 : 1
+Enter the Date of Goods to be Delivered : 3
+Enter the Delivery Time                 : 4
+Total Cost of Sweet                     : 3800
+Total Cost of Savouries                 : 680.0
+Total Amount                            : 4480.0
+Amount paid in Advance                  : 1000
+Door Delivery                           : yes
+Door Delivery Address                   : ss
+Packaging Details                       : grws
+Balance                                 : 3480.0
+Payment Type                            : upi
+Transaction Id                          : weagr4
